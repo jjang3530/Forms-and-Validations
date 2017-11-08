@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+	
+		<title>Assignment2</title>
+		<meta charset="utf-8" >
+		<link rel="stylesheet" href="css/style.css" >
+		<script src="js/main.js"></script>
+		
+	</head>
+	
+	<body onload="Init();" >
+			
+		<header>
+			<h2>Assignment2 - Forms and Validations</h2>
+		</header>
+		
+		<main>
+			<h2>Create an Account</h2>
+			<ul>
+				<li>Please complete the following online registration form.</li>
+				<li>(<span class="red">*</span>)mandatory fields must be filled in.</li>
+				<li>
+					Password must be followed the rules below.
+					<ul>
+						<li>Password must be between <span class="red">8 and 16.</span></li>
+						<li>Password must have <span class="red">at least one number.</span></li>
+						<li>Password must have <span class="red">at least one upper case alphebet.</span></li>
+						<li>Password must have <span class="red">at least one lower case alphebet.</span></li>
+						<li><span class="red">Other characters(!@#$%)</span> are not allowed.</li>
+					</ul>
+				</li>
+			</ul>
+
+			<div id="errorArea"></div>
+			<form name="registForm" onsubmit="return Validate();">
+				<fieldset id="fieldset">
+					<legend>Registration Form</legend>
+					
+					<table>
+						<tr>
+							<td><label id="firstNameLB" class="required">First Name:</label></td>
+							<td><input type="text" name="firstName" value="" id="firstName" onblur="this.value = RemoveWhiteSpace(this.value); this.value = Capitalize(this.value);"></td>
+						</tr>
+						
+						<tr>	
+							<td><label id="middleNameLB">Middle Name</label>:</td>
+							<td><input type="text" name="middleName" value="" id="middleName" onblur="this.value = RemoveWhiteSpace(this.value); this.value = Capitalize(this.value);"></td>
+						</tr>
+						
+						<tr>
+							<td><label id="lastNameLB" class="required">Last Name</label>:</td>
+							<td><input type="text" name="lastName" value="" id="lastName" onblur="this.value = RemoveWhiteSpace(this.value); this.value = Capitalize(this.value);"></td>
+						</tr>
+						
+						<tr>
+							<td><label id="emailLB" class="required">Email</label>:</td>
+							<td><input type="text" name="email" value="" id="email" placeholder="ex) name@example.com" onblur="this.value = RemoveWhiteSpace(this.value);" ></td>
+						</tr>
+						
+						<tr>
+							<td><label id="pwLB" class="required">Password</label>:</td>
+							<td><input type="password" name="pw" value="" id="pw"></td>
+						</tr>
+						
+						<tr>
+							<td><label id="confirmPwLB" class="required">Confirm Password</label>:</td>
+							<td><input type="password" name="confirmPw" value="" id="confirmPw"></td>
+						</tr>
+
+						<tr>
+							<td><label id="phoneLB" class="required">Phone Number</label>:</td>
+							<td><input type="text" name="phone" value="" id="phone" placeholder="ex) 1002003456" onblur="this.value = RemoveWhiteSpace(this.value);"></td>
+						</tr>
+					
+						<tr>
+							<td><label id="addressLB">Address</label>:</td>
+							<td><input type="text" name="address" value="" id="address" onblur="this.value = RemoveWhiteSpace(this.value); this.value = ToUpper(this.value);"></td>
+						</tr>
+						
+						<tr>
+							<td><label id="cityLB">City</label>:</td>
+							<td><input type="text" name="city" value="" id="city" onblur="this.value = RemoveWhiteSpace(this.value); this.value = ToUpper(this.value);"></td>
+						</tr>
+						
+						<tr>
+							<td><label id="provinceLB">Province</label>:</td>
+							<td>
+								<select id="province">
+									<option value="">Choose a province</option>
+									<option value="AB">Alberta</option>
+									<option value="BC">British Columbia</option>
+									<option value="MN">Manitoba</option>
+									<option value="NB">New Brunswick</option>
+									<option value="NL">Newfoundland and Labrador</option>
+									<option value="NS">Nova Scotia</option>
+									<option value="ON">Ontario</option>
+									<option value="PE">Prince Edward Island</option>
+									<option value="SC">Saskatchewan</option>
+									<option value="QC">Quebec</option>
+									<option value="NT">Northwest Territories</option>
+									<option value="NU">Nunavut</option>
+									<option value="YT">Yukon</option>
+								</select>
+							</td>
+						</tr>
+						
+						<tr>
+							<td><label id="zipcodeLB">Zipcode</label>:</td>
+							<td><input type="text" name="zipcode" value="" id="zipcode" placeholder="ex) A1AB2B" onblur="this.value = RemoveWhiteSpace(this.value); this.value = ToUpper(this.value);"></td>
+						</tr>
+
+						<tr>
+							<td><label id="languageLB" class="required">Language</label>:</td>
+							<td>
+								<input type="radio" name="language" id="english" value="1"><span id="englishLB">&nbsp;English&nbsp;&nbsp;&nbsp;</span>
+								<input type="radio" name="language" id="french" value="2"><span id="frenchLB">&nbsp;French</span>
+							</td>
+						</tr>
+
+					</table>
+						
+				</fieldset>
+				
+				<!-- agreement -->
+				<input type="checkbox" name="agreement" value="1" id="agreement"><label id="agreementLB" class="required">&nbsp;&nbsp;I agree with terms and conditions.</label>
+				<input type="submit" id="regist" value="REGIST" >
+		
+			</form>			
+		</main>
+
+		<footer>
+			<p>Copyright &copy; 2017 Group 8 Hyungseok & Jay All rights reserved.</p>
+		</footer>			
+	
+	</body>
+
+</html>

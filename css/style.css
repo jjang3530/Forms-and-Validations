@@ -1,0 +1,103 @@
+/*
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	margin: 0 auto;
+	width: 50%;
+	background-color: silver;
+}
+*/
+header {
+	margin: 20px 0;
+
+}
+
+header h2{
+color: #1a65b8;
+padding-left:10px;
+}
+header p{
+font-weight: bold;
+padding-left:20px;
+}
+
+header img {
+float: left;
+padding: 0 30px;
+}
+
+body{
+font-family: Arial, Helvetica, sans-serif;
+width: 600px;
+margin: 0 auto;
+margin-top: 30px;
+
+}
+
+body h2{
+color: #1a65b8;
+padding-left:20px;
+}
+
+
+main {
+	border: 3px solid #1a65b8;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+
+input[type=text], input[type=password]{
+	width: 250px;
+}
+
+#errorArea{
+	font-size: 100%;
+	color: red;
+	margin: 20px;
+	padding-left: 25px;
+	line-height:150%;
+	border: 1px solid red;
+	display: none;
+}
+
+#fieldset{
+	padding: 10px;
+	margin: 10px;
+	border: 2px solid #1a65b8;
+}
+#agreement {
+	margin: 0 0 0 20px;
+}
+
+#regist{
+	width: 100px;
+	margin: 0px 0 20px 80%;
+}
+
+
+footer p {
+	font-size: .8em;
+	text-align: center;
+	color: #fca017;
+	padding: 1em 0;
+}
+
+.red {
+	color: red;
+}
+
+td:first-child {
+	width: 150px;
+	padding-right: 10px;
+	text-align: right;
+
+}
+
+.required:before {
+    color: red;
+    content: '* ';
+}
